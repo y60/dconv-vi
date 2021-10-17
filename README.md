@@ -16,11 +16,13 @@ See here https://docs.docker.com/storage/bind-mounts/ to check how to mount your
 
 ## Test
 The snapshot of a pretrained model is here: https://drive.google.com/file/d/1Fvc4m2a6aQMhYmCPOBja2n5scVpykpAq/view
+
+Run DCPNet_test.py to test our model on DAVIS. 
 ```
 cd dconv-vi
 mkdir -p experiment_0/weight
 mv 1580616176_700epoch.pt experiment_0/weight
-python CPNet_test.py -name experiment_0 -pcd_align -gs_max 100 -resume recent -data_root /path/to/DAVIS
+python DCPNet_test.py -name experiment_0 -pcd_align -gs_max 100 -resume recent -data_root /path/to/DAVIS
 ```
 
 ## Reference
